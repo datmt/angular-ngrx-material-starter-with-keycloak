@@ -145,7 +145,6 @@
       }
     }
   },
-  "defaultProject": "angular-ngrx-material-starter",
   "cli": {
     "analytics": false
   }
