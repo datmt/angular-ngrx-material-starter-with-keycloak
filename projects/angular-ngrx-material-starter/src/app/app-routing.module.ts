@@ -27,13 +27,6 @@ const routes: Routes = [
       )
   },
   {
-    path: 'examples',
-    loadChildren: () =>
-      import('./features/examples/examples.module').then(
-        (m) => m.ExamplesModule
-      )
-  },
-  {
     path: '**',
     redirectTo: 'about'
   }
