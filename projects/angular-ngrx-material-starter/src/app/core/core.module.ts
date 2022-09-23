@@ -112,7 +112,7 @@ export function httpLoaderFactory(http: HttpClient) {
     environment.production
       ? []
       : StoreDevtoolsModule.instrument({
-          name: 'Angular NgRx Material Starter'
+          name: 'Angular NgRx Material Keycloak Starter'
         }),
 
     // 3rd party
