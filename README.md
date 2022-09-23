@@ -32,6 +32,9 @@ function initializeKeycloak(keycloak: KeycloakService) {
 
 ```
 
+You can try login with this user `jake@jake.com` and password is `1`.
+
+If you are lucky, that user is still valid. If not, try setting up your own keycloak server.
 
 Have fun building apps!
 
