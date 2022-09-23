@@ -23,12 +23,6 @@
     "contributors:generate": "all-contributors generate && node .all-contributors-html.js",
     "contributors:check": "all-contributors check"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -62,7 +56,9 @@
     "rxjs": "~6.6.3",
     "tslib": "^2.2.0",
     "uuid": "^8.3.1",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "keycloak-angular": "^12.1.0",
+    "keycloak-js": "^19.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.3",
@@ -80,9 +76,6 @@
     "all-contributors-cli": "^6.19.0",
     "assert": "^2.0.0",
     "codelyzer": "^6.0.0",
-    "eslint": "^7.13.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-import": "^2.22.1",
     "express": "^4.16.4",
     "husky": "^4.3.0",
     "jasmine-core": "~3.6.0",
