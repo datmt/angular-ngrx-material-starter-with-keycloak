@@ -22,30 +22,6 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
-import {
-  FontAwesomeModule,
-  FaIconLibrary
-} from '@fortawesome/angular-fontawesome';
-import {
-  faPlus,
-  faEdit,
-  faTrash,
-  faTimes,
-  faCaretUp,
-  faCaretDown,
-  faExclamationTriangle,
-  faFilter,
-  faTasks,
-  faCheck,
-  faSquare,
-  faLanguage,
-  faPaintBrush,
-  faLightbulb,
-  faWindowMaximize,
-  faStream,
-  faBook
-} from '@fortawesome/free-solid-svg-icons';
-import { faMediumM, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { BigInputComponent } from './big-input/big-input/big-input.component';
 import { BigInputActionComponent } from './big-input/big-input-action/big-input-action.component';
@@ -73,8 +49,6 @@ import { RtlSupportDirective } from './rtl-support/rtl-support.directive';
     MatSnackBarModule,
     MatSlideToggleModule,
     MatDividerModule,
-
-    FontAwesomeModule
   ],
   declarations: [
     BigInputComponent,
@@ -106,36 +80,12 @@ import { RtlSupportDirective } from './rtl-support/rtl-support.directive';
     MatSliderModule,
     MatDatepickerModule,
     MatNativeDateModule,
-
-    FontAwesomeModule,
-
     BigInputComponent,
     BigInputActionComponent,
     RtlSupportDirective
   ]
 })
 export class SharedModule {
-  constructor(faIconLibrary: FaIconLibrary) {
-    faIconLibrary.addIcons(
-      faGithub,
-      faMediumM,
-      faPlus,
-      faEdit,
-      faTrash,
-      faTimes,
-      faCaretUp,
-      faCaretDown,
-      faExclamationTriangle,
-      faFilter,
-      faTasks,
-      faCheck,
-      faSquare,
-      faLanguage,
-      faPaintBrush,
-      faLightbulb,
-      faWindowMaximize,
-      faStream,
-      faBook
-    );
+  constructor() {
   }
 }

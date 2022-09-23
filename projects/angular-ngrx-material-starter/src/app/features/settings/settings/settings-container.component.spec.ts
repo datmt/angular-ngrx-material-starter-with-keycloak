@@ -5,11 +5,6 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule } from '@ngx-translate/core';
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
 import { MemoizedSelector } from '@ngrx/store';
-import {
-  FaIconLibrary,
-  FontAwesomeModule
-} from '@fortawesome/angular-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import { SharedModule } from '../../../shared/shared.module';
 
@@ -40,7 +35,6 @@ describe('SettingsComponent', () => {
     waitForAsync(() => {
       TestBed.configureTestingModule({
         imports: [
-          FontAwesomeModule,
           SharedModule,
           NoopAnimationsModule,
           TranslateModule.forRoot()
@@ -49,7 +43,6 @@ describe('SettingsComponent', () => {
         declarations: [SettingsContainerComponent]
       }).compileComponents();
 
-      TestBed.inject(FaIconLibrary).addIcons(faBars);
 
       store = TestBed.inject(MockStore);
       mockSelectSettings = store.overrideSelector(

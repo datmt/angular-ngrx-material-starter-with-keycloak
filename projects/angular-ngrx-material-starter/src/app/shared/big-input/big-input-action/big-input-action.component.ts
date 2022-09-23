@@ -6,7 +6,6 @@ import {
   ChangeDetectionStrategy
 } from '@angular/core';
 
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'anms-big-input-action',
@@ -21,8 +20,6 @@ export class BigInputActionComponent {
   fontSet = '';
   @Input()
   fontIcon = '';
-  @Input()
-  faIcon: IconProp | undefined;
   @Input()
   label = '';
   @Input()

@@ -14,10 +14,6 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import {
-  FaIconLibrary,
-  FontAwesomeModule
-} from '@fortawesome/angular-fontawesome';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
@@ -59,21 +55,6 @@ import {
   selectSettingsStickyHeader
 } from './settings/settings.selectors';
 import { MatButtonModule } from '@angular/material/button';
-import {
-  faCog,
-  faBars,
-  faRocket,
-  faPowerOff,
-  faUserCircle,
-  faPlayCircle
-} from '@fortawesome/free-solid-svg-icons';
-import {
-  faGithub,
-  faMediumM,
-  faTwitter,
-  faInstagram,
-  faYoutube
-} from '@fortawesome/free-brands-svg-icons';
 
 export {
   TitleService,
@@ -135,7 +116,6 @@ export function httpLoaderFactory(http: HttpClient) {
         }),
 
     // 3rd party
-    FontAwesomeModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -166,7 +146,6 @@ export function httpLoaderFactory(http: HttpClient) {
     MatButtonModule,
 
     // 3rd party
-    FontAwesomeModule,
     TranslateModule
   ]
 })
@@ -175,23 +154,9 @@ export class CoreModule {
     @Optional()
     @SkipSelf()
     parentModule: CoreModule,
-    faIconLibrary: FaIconLibrary
   ) {
     if (parentModule) {
       throw new Error('CoreModule is already loaded. Import only in AppModule');
     }
-    faIconLibrary.addIcons(
-      faCog,
-      faBars,
-      faRocket,
-      faPowerOff,
-      faUserCircle,
-      faPlayCircle,
-      faGithub,
-      faMediumM,
-      faTwitter,
-      faInstagram,
-      faYoutube
-    );
   }
 }
